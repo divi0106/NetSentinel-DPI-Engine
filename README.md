@@ -278,6 +278,25 @@ purely from how packets behave — no domain names used.
 
 ---
 
+## ML Classifier — CICIDS2017
+
+Trained on real network attack dataset (134,412 samples):
+
+| Attack Type | Precision | Recall |
+|---|---|---|
+| DDoS | 100% | 100% |
+| Port Scan | 100% | 100% |
+| Normal | 99% | 99% |
+| Web Attack | 88% | 98% |
+
+Overall Accuracy: 99.38%
+
+> Note: High accuracy (99.4%) is consistent with 
+> published results on CICIDS2017. DDoS and Port Scan 
+> attacks have distinctive behavioral signatures making 
+> them easy to classify. Infiltration detection is weaker 
+> (86% recall) due to only 36 training samples.
+
 ## Key Engineering Decisions
 
 **Why not use libpcap?**
